@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}XteamHub{% endblock %}</title>
+    {% load static %}
+    {% block styles %}<link rel="stylesheet" href="{% static 'css/game_pass_styles.css' %}">{% endblock %}
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/logo (1).png' %}" alt="XteamHub Logo" class="logo-image">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#" sclass="chosed_page">Home</a></li>
+                <li class="nav-list-item"><a href="{% url 'game-pass' %}" class="chosed_page">Game pass</a></li>
+                <li class="nav-list-item"><a href="#">Amigos</a></li>
+                <li class="nav-list-item"><a href="#">Suporte</a></li>
+                <li class="nav-list-item"><a href="#">Tema</a></li>
+            </ul>
+        </nav>
+
+        <div class="perfil-container">
+            <div>
+                <img src="{% static 'images/43037909.jpg' %}" alt="Imagem de perfil" class="perfil-image">
+            </div>
+            <div class="perfil-info">
+                <h2 id="perfil">Matheus Lima</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - XteamHub</p>
+    </footer>
+</body>
+</html>

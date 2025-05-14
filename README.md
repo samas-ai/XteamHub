@@ -5,7 +5,7 @@
 ---
 
 ## 🚀 Funcionalidades
-
+- CRUD para adicionar, deletar e atualizar um game
 - Listagem de jogos com paginação (4 por página)
 - Estilização com tema escuro e laranja (inspirado em visual gamer)
 - Sistema de templates com herança (`base.html`)

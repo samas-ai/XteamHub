@@ -24,33 +24,6 @@
 
 ---
 
-## 📁 Estrutura do Projeto
-
-xteamhub/
-├── games/
-│ ├── models.py
-│ ├── views.py
-│ ├── urls.py
-│ ├── templates/games/
-│ │ ├── base.html
-│ │ ├── game_pass.html
-│ │ ├── amigos.html
-| | └── home.html
-| | └── suporte.html
-| | └── tema.html
-├── static/
-│ ├── css/
-│ │ └── game_pass_styles.css
-| | └── home_styles.css
-| | └── amigos_styles.css
-| | └── suporte_styles.css
-| | └── tema_styles.css
-│ └── images/
-├── db.sqlite3
-├── manage.py
-└── xteamhub/
-└── settings.py
-
 👤 Autor
 Samuel Souza de Araújo
 Projeto educacional e experimental para prática com Django + Frontend customizado

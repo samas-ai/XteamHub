@@ -1,0 +1,48 @@
+.form-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #111;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: orange;
+}
+
+.form-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: darkorange;
+}

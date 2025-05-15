@@ -1,0 +1,35 @@
+.confirm-delete {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #111;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+}
+
+.confirm-delete h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.confirm-delete button,
+.confirm-delete a {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-delete {
+    background-color: crimson;
+    color: white;
+    border: none;
+}
+
+.btn-cancel {
+    background-color: gray;
+    color: white;
+}

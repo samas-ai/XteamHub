@@ -1,0 +1,301 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Seções */
+section {
+    margin-bottom: 60px;
+}
+section h2, section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+/* Gráfico */
+.grafico1, .grafico2 {
+    width: 80%;
+    max-width: 1000px;
+    height: 500px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 111, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    text-align: center;
+}
+
+canvas {
+    background-color: black;
+    border-radius: 10px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Ranking */
+.ranking-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    background-color: #111;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px orange;
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid orange;
+}
+th {
+    background-color: orange;
+    color: black;
+}
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 165, 0, 0.05);
+}
+
+button {
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 30px auto;
+}
+button:hover {
+    background-color: darkorange;
+}
+
+/* Carrossel */
+.carousel-section {
+    text-align: center;
+    color: orange;
+    margin: 40px 0;
+}
+
+.carousel-wrapper {
+    height: fit-content;
+    width: 500px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: black;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9 / 16; /* proporção vertical para jogos */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ou "cover" se preferir preencher */
+    display: block;
+    border-radius: 10px;
+    background-color: black; /* previne fundo branco em imagens menores */
+    border: orange 1px solid;
+}
+
+
+.slide.active {
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 0;
+}
+
+
+
+.carousel-controls button {
+    padding: 8px 16px;
+    font-size: 1.2rem;
+    border: 1px solid orange;
+    background-color: black;
+    color: orange;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.carousel-controls button:hover {
+    background-color: orange;
+    color: black;
+}
+
+/* Footer */
+.footer-home {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid orange;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .ranking-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .grafico-box {
+        height: 300px;
+    }
+}
+
+header {
+    display: flex;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: orange 1px solid;
+    box-shadow: 0px 0px 10px 0px rgba(255, 165, 0, 1);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.logo-image {
+    width: 300px;
+    height: 75px;
+    margin: 10px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-list-item {
+    list-style: none;
+    padding: 0 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.6vh;
+}
+
+a:hover {
+    color: orange;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    font-size: 2.7vh;
+}
+
+.chosed_page {
+    color: orange;
+    text-decoration: underline solid orange;
+    text-underline-offset: 6px;
+}
+
+.perfil-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 10vh;
+    width: 32vh;
+    color: white;
+    font-size: 1.7vh;
+    border: orange 1.5px solid;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 165, 0, 1);
+}
+
+.perfil-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/* Área total da barra */
+::-webkit-scrollbar {
+    width: 10px;  /* largura vertical */
+    height: 10px; /* altura horizontal */
+}
+
+/* Fundo da barra (trilho) */
+::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 10px;
+}
+
+/* Parte que desliza */
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 10px;
+    border: 2px solid #111;
+}
+
+/* Ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff9900;
+}
+
+
+
+

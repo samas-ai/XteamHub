@@ -1,0 +1,21 @@
+{% extends 'games/base.html' %}
+{% load static %}
+
+{% block title %}Deletar Jogo{% endblock %}
+
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/jogo_confirm_delete.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<section class="confirm-delete">
+    <h2>Tem certeza que deseja deletar <strong>"{{ object.nome }}"</strong>?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn-delete">Sim, deletar</button>
+        <a href="{% url 'game-pass' %}" class="btn-cancel">Cancelar</a>
+    </form>
+</section>
+{% endblock %}

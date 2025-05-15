@@ -1,0 +1,11 @@
+{% extends 'games/base.html' %}
+{% block title %}Deletar Jogo{% endblock %}
+
+{% block content %}
+<h2>Tem certeza que deseja deletar "{{ object.nome }}"?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, deletar</button>
+    <a href="{% url 'game-pass' %}">Cancelar</a>
+</form>
+{% endblock %}
